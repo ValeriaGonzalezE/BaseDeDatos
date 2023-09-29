@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inicio</title>
+  <title>Registro del Funcionario</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -60,7 +60,7 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">INICIAR SESION</h5>
+                    <h5 class="card-title text-center pb-0 fs-4">Registro Funcionario</h5>
                     <p class="text-center small"></p>
                   </div>
 
@@ -76,22 +76,47 @@
                     </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">contraseña</label>
+                      <label for="yourPassword" class="form-label">Documento</label>
+                      <input type="text" name="password" class="form-control" id="yourPassword" required>
+                      <div class="invalid-feedback">Por favor ingresa tu documento</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourPassword" class="form-label">Correo</label>
+                      <input type="email" name="password" class="form-control" id="yourPassword" required>
+                      <div class="invalid-feedback">Por favor ingresa tu correo</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourPassword" class="form-label">Telefono</label>
+                      <input type="text" name="password" class="form-control" id="yourPassword" required>
+                      <div class="invalid-feedback">Por favor ingresa tu telefono</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourPassword" class="form-label">Cargo</label>
+                      <br>
+                    <select name="cars" id="cars" form="carform" style="width:350px" >
+                        <option value="volvo">  </option>
+                        <option value="volvo">Portero</option>
+                        <option value="saab">vigilante</option>
+                        <option value="opel">limpieza</option>
+                        <option value="audi">Administracion</option>
+                        <option value="audi">contaduria</option>
+                    </select>
+                      <div class="invalid-feedback">Por favor ingresa tu cargo</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourPassword" class="form-label">Contraseña</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                       <div class="invalid-feedback">Por favor ingresa tu contraseña</div>
                     </div>
-
-                    <br><br><br><br><br>
+                    
                     <div class="col-12">
-                     <a href="PanelControl.html"><button class="btn btn-primary w-100" type="button">Iniciar sesion </button></a>
+                     <a href="Inicio.html"><button class="btn btn-primary w-100" type="button">Registrarse </button></a>
                     </div>
-                    <div class="col-12">
-                      <p class="small mb-0"> <center><a href="olvido_contraseña.html">olvido su contraseña?</a></center></p>
-                    </div>
-                    <br><br><br>
-                    <div class="col-12">
-                      <a href="registrar.html"><button class="btn btn-primary w-100" type="button">Registrarse</button> </a>
-                    </div>
+                    
                   </form>
 
                 </div>
