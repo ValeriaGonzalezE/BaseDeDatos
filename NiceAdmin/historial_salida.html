@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Registro del Residente</title>
+  <title>Registros de entrada</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -60,56 +60,48 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Registro Residente</h5>
+                    <h5 class="card-title text-center pb-0 fs-4">Historial de salidas</h5>
                     <p class="text-center small"></p>
                   </div>
-
-                
+<br><br>
+                  <form class="row g-3 needs-validation" novalidate>
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Nombre</label>
-                      <div class="input-group has-validation">
-                        
-                        <input type="text" name="username" class="form-control" id="nombre" required>
-                        <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                    </div>
+                      <hr>
+
+                    <div class="col-12">
+                      <label for="yourPassword" class="form-label">contraseña</label>
+                    </div>
+                    <hr>
+
+                    <div class="col-12">
+                        <label for="yourUsername" class="form-label">Nombre</label>
                       </div>
-                    </div>
-
+                        <hr>
+  
+                      <div class="col-12">
+                        <label for="yourPassword" class="form-label">contraseña</label>
+                      </div>
+                      <hr>
+                      
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Documento</label>
-                      <input type="text" name="password" class="form-control" id="documento" required>
-                      <div class="invalid-feedback">Por favor ingresa tu Documento</div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Correo</label>
-                      <input type="email" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Por favor ingresa tu correo</div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Inmueble</label>
-                      <input type="text" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Por favor ingresa tu inmueble</div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Telefono</label>
-                      <input type="text" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Por favor ingresa tu telefono</div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Contraseña</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Por favor ingresa tu contraseña</div>
-                    </div>
-                    
-                    <div class="col-12">
-                     <button class="btn btn-primary w-100" onclick="guardarusuario()">Registrarse </button>
-                    </div>
-                    
-                  
+                        <label for="yourUsername" class="form-label">Nombre</label>
+                      </div>
+                        <hr>
+  
+                      <div class="col-12">
+                        <label for="yourPassword" class="form-label">contraseña</label>
+                      </div>
+                      <hr>
+  
+                      <div class="col-12">
+                          <label for="yourUsername" class="form-label">Nombre</label>
+                        </div>
+                          <hr>
+                        
+                  </form>
 
                 </div>
               </div>
@@ -142,28 +134,9 @@
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    function guardarusuario() {
-      var nombre=document.getElementById("nombre").value;
-      var documento=document.getElementById("documento").value;
-      // Send a POST request
-      
-axios({
-  method: 'post',
-  url: 'http://localhost/webService/ejemploPost.php',
-  data: {
-    nombre: nombre,
-    documento: documento
-  },Headers:{
-    'Content-Type': 'application/json',
-  },
-});
-    }
-  </script>
 
 </body>
 
