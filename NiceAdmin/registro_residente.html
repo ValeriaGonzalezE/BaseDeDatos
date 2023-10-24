@@ -76,32 +76,38 @@
                     </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Documento</label>
-                      <input type="text" name="password" class="form-control" id="documento" required>
+                      <label for="yourPassword" class="form-label">Primer Apellido</label>
+                      <input type="text" name="password" class="form-control" id="apellido1" required>
                       <div class="invalid-feedback">Por favor ingresa tu Documento</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Correo</label>
-                      <input type="email" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Por favor ingresa tu correo</div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Inmueble</label>
-                      <input type="text" name="password" class="form-control" id="yourPassword" required>
+                      <label for="yourPassword" class="form-label">Segundo Apellido</label>
+                      <input type="text" name="password" class="form-control" id="apellido2" required>
                       <div class="invalid-feedback">Por favor ingresa tu inmueble</div>
                     </div>
-
+                    
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Telefono</label>
-                      <input type="text" name="password" class="form-control" id="yourPassword" required>
+                      <label for="yourPassword" class="form-label">Celular</label>
+                      <input type="text" name="password" class="form-control" id="celular" required>
                       <div class="invalid-feedback">Por favor ingresa tu telefono</div>
                     </div>
 
                     <div class="col-12">
+                      <label for="yourPassword" class="form-label">Documento</label>
+                      <input type="text" name="password" class="form-control" id="documento" required>
+                      <div class="invalid-feedback">Por favor ingresa tu telefono</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourPassword" class="form-label">Correo</label>
+                      <input type="email" name="password" class="form-control" id="correo" required>
+                      <div class="invalid-feedback">Por favor ingresa tu correo</div>
+                    </div>
+                  
+                    <div class="col-12">
                       <label for="yourPassword" class="form-label">Contraseña</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <input type="password" name="password" class="form-control" id="contraseña" required>
                       <div class="invalid-feedback">Por favor ingresa tu contraseña</div>
                     </div>
                     
@@ -149,6 +155,9 @@
   <script>
     function guardarusuario() {
       var nombre=document.getElementById("nombre").value;
+      var apellido1=document.getElementById("apellido_1").value;
+      var apellido2=document.getElementById("apellido_2").value;
+      var celular=document.getElementById("celular").value;
       var documento=document.getElementById("documento").value;
       // Send a POST request
       
@@ -157,6 +166,8 @@ axios({
   url: 'http://localhost/webService/ejemploPost.php',
   data: {
     nombre: nombre,
+    apellido1: apellido_1,
+    apellido2: apellido_2,
     documento: documento
   },Headers:{
     'Content-Type': 'application/json',
