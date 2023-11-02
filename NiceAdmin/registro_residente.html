@@ -77,13 +77,13 @@
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Primer Apellido</label>
-                      <input type="text" name="password" class="form-control" id="apellido1" required>
+                      <input type="text" name="password" class="form-control" id="apellido_1" required>
                       <div class="invalid-feedback">Por favor ingresa tu Documento</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Segundo Apellido</label>
-                      <input type="text" name="password" class="form-control" id="apellido2" required>
+                      <input type="text" name="password" class="form-control" id="apellido_2" required>
                       <div class="invalid-feedback">Por favor ingresa tu inmueble</div>
                     </div>
                     
@@ -101,7 +101,7 @@
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Correo</label>
-                      <input type="email" name="password" class="form-control" id="correo" required>
+                      <input type="email" name="password" class="form-control" id="email" required>
                       <div class="invalid-feedback">Por favor ingresa tu correo</div>
                     </div>
                   
@@ -155,10 +155,12 @@
   <script>
     function guardarusuario() {
       var nombre=document.getElementById("nombre").value;
-      var apellido1=document.getElementById("apellido_1").value;
-      var apellido2=document.getElementById("apellido_2").value;
+      var apellido_1=document.getElementById("apellido_1").value;
+      var apellido_2=document.getElementById("apellido_2").value;
       var celular=document.getElementById("celular").value;
       var documento=document.getElementById("documento").value;
+      var email=document.getElementById("email").value;
+     
       // Send a POST request
       
 axios({
@@ -166,12 +168,22 @@ axios({
   url: 'http://localhost/webService/ejemploPost.php',
   data: {
     nombre: nombre,
-    apellido1: apellido_1,
-    apellido2: apellido_2,
-    documento: documento
-  },Headers:{
+    apellido_1: apellido_1,
+    apellido_2: apellido_2,
+    celular: celular,
+    documento: documento,
+    email:email
+  },  headers: {
     'Content-Type': 'application/json',
   },
+})
+.then(function (response) {
+  // Handle a successful response from your web service
+  console.log(response.data);
+})
+.catch(function (error) {
+  // Handle errors here
+  console.error(error);
 });
     }
   </script>
